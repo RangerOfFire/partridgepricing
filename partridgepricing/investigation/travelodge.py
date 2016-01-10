@@ -3,6 +3,15 @@ import json, sys, logging
 from pony.orm import Database, Required, Optional, Set, db_session
 import requests
 
+"""
+Deep link:
+https://www.travelodge.co.uk/search_and_book/index.php
+?action=search&check_from=
+&locationCode=30287&location=London+Ealing+Travelodge&location_code=30287
+&checkInDate=02%2F02%2F2016&checkOutDate=03%2F02%2F2016&no_of_rooms=1
+&adults_1=1&children_1=0
+&adults_2=1&children_2=0&adults_3=1&children_3=0&adults_4=1&children_4=0&adults_5=1&children_5=0&adults_6=1&children_6=0&adults_7=1&children_7=0&adults_8=1&children_8=0&adults_9=1&children_9=0&search=Find+rooms
+"""
 
 logging.basicConfig(level=logging.DEBUG)
 db = Database()
